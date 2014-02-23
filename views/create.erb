@@ -1,0 +1,12 @@
+<h3>New Server</h3>
+
+<form id='create_server' method='POST' action=''>
+  <input type='text' class='big' name = 'name' placeholder='New Server Name' autofocous />
+  .
+  <select name='domain'>
+  <% @domains.each do |domain| %>
+    <option value='<%= domain %>'> <%= domain %> </option>
+  <% end %>
+  </select>
+  <input type='image' src='img/gear.png' alt='go' height=42 width=42 />
+</form>

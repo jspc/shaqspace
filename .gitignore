@@ -1,0 +1,4 @@
+log/*
+tmp/pids/*
+tmp/sockets/*
+!.gitkeep

@@ -1,0 +1,30 @@
+<h2><%= @server.name %></h2><br />
+<div id='<%= @server.state.downcase %>' >
+  <b>Status:</b> <%= @server.state %><br />
+  <b>Flavor:</b> <%= @server.flavor_id %><br />
+  <b>Created:</b> <%= @server.created %><br />
+</div>
+<br />
+<br />
+
+<h3>Network</h3><br />
+<div id='network'>
+  <b>IPv4:</b> <%= @server.ipv4_address %><br />
+  <b>IPv6:</b> <%= @server.ipv6_address %><br />
+  <b>Others:</b><br />
+<% @server.addresses.each do |type,addresses| %>
+  <b>Network:</b> <%= type %><br />
+  <% addresses.each do |a| %>
+    <%= a['addr'] %><br />
+  <% end %>
+<% end %>
+</div>
+<br />
+<br />
+<h3>DNS</h3><br />
+<div id='dns'>
+<% @dns_entries.each do |entry| %>
+  <%= entry %><br />
+<% end %>
+</div>
+<script src="/js/auto_refresh.js"></script>

@@ -1,0 +1,6 @@
+<h2>Shaqspace Servers</h2>
+<ul id='servers'>
+<% @servers.each do |server| %>
+   <li><a href='/server/<%= server %>'> <%= server %> </a></li>
+<% end %>
+</ul>
