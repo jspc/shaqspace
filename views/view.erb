@@ -1,4 +1,10 @@
-<h2><%= @server.name %></h2><br />
+<h2>
+<%= @server.name %>
+<a href='/server/<%= @server.name %>/delete' ><img src='/img/trash.png' id='trash' alt='delete' /></a>
+</h2>
+
+<br />
+
 <div id='<%= @server.state.downcase %>' >
   <b>Status:</b> <%= @server.state %><br />
   <b>Flavor:</b> <%= @server.flavor_id %><br />
