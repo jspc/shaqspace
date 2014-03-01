@@ -10,7 +10,10 @@ class Create
       subdomains = %w(www)
     end
 
+    flavor = '2 GB Performance'
+    image  = 'CentOS 6'
+
     spinup = Fuggery::Rackspace::Spinup.new u, k
-    spinup.create fqdn, domain, subdomains
+    spinup.create fqdn, flavor, image, domain, subdomains
   end
 end

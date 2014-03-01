@@ -28,10 +28,7 @@ post '/server/:name/delete' do
   redirect '/login' unless session[:logged]
   if params[:confirmed] == 'true'
     begin
-      @name = params[:name]
-      @host, @zone = Helpers::tld @name, session[:dns]
-      session[:dns].remove_all @name, @zone
-      session[:servers].remove @name
+      Resque.enqueue(Remove, session[:u], session[:k], params[:name])
       redirect '/'
     rescue Exception=>e
       @err = e

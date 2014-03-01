@@ -6,7 +6,6 @@ post '/login' do
   session[:u]  = params[:user]
   session[:k]  = params[:key]
   begin
-    session[:spinup]  =  Fuggery::Rackspace::Spinup.new session[:u], session[:k]
     session[:dns]     =  Fuggery::Rackspace::DNS.new session[:u], session[:k]
     session[:servers] =  Fuggery::Rackspace::Servers.new session[:u], session[:k]
     session[:logged]  =  true
