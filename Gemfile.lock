@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/jspc/fuggery-spinup
-  revision: 1ab0d70da900ae69fa228bd4b6fa243adb6f056b
-  ref: 1ab0d70da900ae69fa228bd4b6fa243adb6f056b
+  revision: 93324dc08d5ca7df088d7e3805c4a72009816c00
+  ref: 93324dc08d5ca7df088d7e3805c4a72009816c00
   specs:
-    fuggery-rackspace-spinup (1.1.0)
+    fuggery-rackspace-spinup (1.2.0)
       fog (= 1.19.0)
       unf (= 0.1.3)
 
