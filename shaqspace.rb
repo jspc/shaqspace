@@ -8,10 +8,14 @@ $LOAD_PATH.unshift File.join(File.dirname(__FILE__), 'lib')
 require 'sinatra'
 require 'resque'
 require 'fuggery/rackspace/servers'
+require 'fuggery/rackspace/dns'
 require 'fuggery/rackspace/spinup'
 
 require 'helpers'
+
+# Resque classes
 require 'create'
+require 'remove'
 
 class Shaq < Sinatra::Application
   configure do
